@@ -7,4 +7,13 @@ html
         meta(name="viewport" content="width=device-width, initial-scale=1")
         link(rel="stylesheet", href="/css/style.css")
     body    
-        a(href="/") Return to the home page
+      h1 Cheese
+      a(href="/") Return to the homepage
+      form(action="/update-cobj" method="post")
+        label(for="name") Name
+        input(type='text' name='name')
+        label(for="region") Color
+        input(type='text' name='color')
+        label(for="holes") Holes
+        input(type='number' name='holes' min="0" max="1")
+        input(type='submit')

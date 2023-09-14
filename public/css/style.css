@@ -10,6 +10,15 @@ h1 {
     margin: 1rem;
 }
 
+th {
+    background-color: #FBDB65;
+}
+
+td {
+    padding-left: 5px;
+    background-color: #FFE380;
+}
+
 .cards {
     display: flex;
     align-items: center;

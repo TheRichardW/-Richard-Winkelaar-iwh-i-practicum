@@ -13,4 +13,10 @@ html
                 th Color 
                 th Holes 
             tr 
+            each cheese in data
+                tr
+                   td #{cheese.properties.name}
+                   td #{cheese.properties.color}
+                   td #{!!+cheese.properties.holes}
+                tr
         table
