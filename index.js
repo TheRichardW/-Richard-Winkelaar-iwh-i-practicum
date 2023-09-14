@@ -8,7 +8,23 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // * Please include the private app access token in your repo BUT only an access token built in a TEST ACCOUNT. Don't do this practicum in your normal account.
-const PRIVATE_APP_ACCESS = '';
+const PRIVATE_APP_ACCESS = 'pat-eu1-54a287b8-f168-49ae-8f54-4c58119a8578';
+
+const isAuhtorized = (userId) => {
+    return false;
+}
+
+app.get('/', async (req, res) => {
+    if (isAuhtorized(req.sessionID)) {
+
+    } else {
+        res.render('home', {title: 'Home | Integrating With HubSpot I Practicum'})
+    };
+})
+
+app.get('/update-cobj', async (req, res) => {
+    res.render('updates', {title: 'Update Custom Object Form | Integrating With HubSpot I Practicum'});
+})
 
 // TODO: ROUTE 1 - Create a new app.get route for the homepage to call your custom object data. Pass this data along to the front-end and create a new pug template in the views folder.
 
